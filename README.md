@@ -16,5 +16,20 @@ an error is raised:
 
 __update__ 12082020
 Added a new function daily_totals(), with an optional state input.
-If a state is the input, it will return the cases and deaths for that state. 
 Without an input, it will return cases and deaths by day for the entire US. 
+    daily_totals()
+                cases 	deaths
+    date 		
+    2020-12-07 	202332.0 	1522.0
+    2020-12-06 	173109.0 	1111.0
+    2020-12-05 	205543.0 	2190.0
+    
+If a state is the input, it will return the cases and deaths for that state. 
+    daily_totals("New Jersey")
+            cases 	deaths
+    date 		
+    2020-12-07 	3563.0 	15.0
+    2020-12-06 	6030.0 	15.0
+    2020-12-05 	5324.0 	51.0
+    
+The datatype for the state and county columns were changed from object to category, to optimize performance. 
