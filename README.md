@@ -15,5 +15,6 @@ an error is raised:
     'Victoria is not in database.'
 
 __update__ 12082020
-Added a new function daily_totals(), with an option input for the state, to either return a dataframe of national totals.
+Added a new function daily_totals(), with an optional state input.
 If a state is the input, it will return the cases and deaths for that state. 
+Without an input, it will return cases and deaths by day for the entire US. 
