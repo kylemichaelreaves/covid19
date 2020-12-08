@@ -13,3 +13,7 @@ an error is raised:
     
     state_df("Victoria")
     'Victoria is not in database.'
+
+__update__ 12082020
+Added a new function daily_totals(), with an option input for the state, to either return a dataframe of national totals.
+If a state is the input, it will return the cases and deaths for that state. 
