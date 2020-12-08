@@ -28,7 +28,7 @@ Without an input, it will return cases and deaths by day for the entire US.
 If a state is the input, it will return the cases and deaths for that state. 
     
     daily_totals("New Jersey")
-            cases 	deaths
+                cases 	deaths
     date 		
     2020-12-07 	3563.0 	15.0
     2020-12-06 	6030.0 	15.0
