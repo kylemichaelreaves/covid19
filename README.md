@@ -35,3 +35,6 @@ If a state is the input, it will return the cases and deaths for that state.
     2020-12-05 	5324.0 	51.0
     
 The datatype for the state and county columns were changed from object to category, to optimize performance. 
+
+__update__ 12132020
+Added functions weekly_df and monthly_df to return dataframes for monthly and weekly cases and deaths. 
