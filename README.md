@@ -38,3 +38,22 @@ The datatype for the state and county columns were changed from object to catego
 
 __update__ 12132020
 Added functions weekly_df and monthly_df to return dataframes for monthly and weekly cases and deaths. 
+        weekly_df()
+
+        weekly cases 	weekly deaths
+    50 	1356998.0 	15658.0
+    49 	1380238.0 	15555.0
+    48 	1134127.0 	10161.0
+    47 	1199731.0 	10514.0
+    46 	1052521.0 	8035.0
+    45 	783697.0 	7389.0
+    
+        monthly_df()
+
+        monthly cases 	monthly deaths
+    month 		
+    12 	2569475.0 	29948.0
+    11 	4412061.0 	37791.0
+    10 	1946627.0 	23653.0
+    9 	1217119.0 	23376.0
+    8 	1473763.0 	29612.0
