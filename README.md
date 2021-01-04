@@ -1,12 +1,45 @@
-# covid19
-A data analysis project which extracts, loads, and tranforms covid-19 data from the NYTimes GitHub repo; 
-Multi-conditional list comprehensions are used to return daily totals for cases and deaths on the county, state, and national level.
+# covid19 US data project
 
-Special attention was given to returns on the county level. Given there are many counties of the same name which appear in multiple states,
-data validation, and an optional state input, was built into the county_df() function. For example:
+# dependencies: pandas
+
+
+A data analysis project using covid-19 data from the NYTimes GitHub repo. 
+Ultimately this dataframe will be compared to another dataframe of 2020 election results. 
+I am curious to see the impact covid had on affecting the outcome of the 2020 election. 
+Did the counties Biden flipped from Trump have higher rates of infectivity and mortality? 
+
+
+Multi-conditional list comprehensions are used to return daily totals for cases and deaths on the county, state, and national level.
+I also wrote functions to return dataframes for daily, weekly, and monthly cases and deaths. 
+
+
+Given there are many counties of the same name which appear in multiple states, data validation, and an optional state input, was built into the county_df() function. 
+For example:
 
     county_df("York")
     "York appears in ['Maine' 'South Carolina' 'Virginia' 'Nebraska' 'Pennsylvania']; please specify."
+    
+    county_df("York", "Virginia")
+    
+                county 	state 	fips 	cases 	deaths 	cases_diff 	deaths_diff
+    date 							
+    2021-01-02 	York 	Virginia 	51199.0 	1493 	13.0 	2.0 	0.0
+    2021-01-01 	York 	Virginia 	51199.0 	1491 	13.0 	19.0 	1.0
+    2020-12-31 	York 	Virginia 	51199.0 	1472 	12.0 	20.0 	0.0
+    2020-12-30 	York 	Virginia 	51199.0 	1452 	12.0 	11.0 	1.0
+    2020-12-29 	York 	Virginia 	51199.0 	1441 	11.0 	44.0 	0.0
+    ... 	... 	... 	... 	... 	... 	... 	...
+    2020-03-20 	York 	Virginia 	51199.0 	3 	0.0 	2.0 	0.0
+    2020-03-19 	York 	Virginia 	51199.0 	1 	0.0 	0.0 	0.0
+    2020-03-18 	York 	Virginia 	51199.0 	1 	0.0 	0.0 	0.0
+    2020-03-17 	York 	Virginia 	51199.0 	1 	0.0 	0.0 	0.0
+    2020-03-16 	York 	Virginia 	51199.0 	1 	0.0 	NaN 	NaN
+
+
+Potential mispellings were accounted for:
+    
+    county_df("York", "Viriginia")
+    'Viriginia is not a state in the dataframe.'
 
 The same validation was built into state_df(). If the input is outside of a list used for validation, 
 an error is raised: 
