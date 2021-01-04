@@ -16,11 +16,13 @@ an error is raised:
 
 
 __update__ 01-03-2021
+
 monthly_df was relying on looping through df.month.unique(), which no longer worked.
 The function was rewritten with a MultiIndex using years and months. 
 
 
 __update__ 12-13-2020
+
 Added functions weekly_df and monthly_df to return dataframes for monthly and weekly cases and deaths. 
         
         weekly_df()
@@ -45,6 +47,7 @@ Added functions weekly_df and monthly_df to return dataframes for monthly and we
 
 
 __update__ 12-08-2020
+
 Added a new function daily_totals(), with an optional state input.
 Without an input, it will return cases and deaths by day for the entire US. 
     
